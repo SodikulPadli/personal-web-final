@@ -1,0 +1,108 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Form Project</title>
+    <!-- Bootstrap CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous' />
+    <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css' integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p' crossorigin='anonymous' />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+      <div class='container'>
+        <a class='navbar-brand' href='/home'>
+          <img src='/public/assets/logo.png' alt='' />
+        </a>
+        <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation'>
+          <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
+          <div class='navbar-nav'>
+            <a class='nav-link ms-4' href='/home'>Home</a>
+            <a class='nav-link ms-4 fw-bold active' href='/add-project'>Add Project</a>
+          </div>
+        </div>
+        <div class='d-flex flex-row-reverse'>
+          <a class='btn btn-dark btn-sm px-3' href='/contact-me'>Contact Me</a>
+        </div>
+      </div>
+    </nav>
+    <!-- akhir Navbar -->
+
+    <!-- form -->
+    <!-- Page Add My Project -->
+    <div class='bg bg-gray-400'>
+      <div class='d-flex w-100 justify-content-center py-5'>
+        <form class='d-flex w-50 h-auto flex-wrap align-items-center gap-3' action='/project' method='POST' enctype='multipart/form-data'>
+          <h3 class='text-uppercase d-flex w-100 justify-content-center'>Add My Project</h3>
+          <!-- input project name -->
+          <div class='form-group d-flex w-100 flex-wrap'>
+            <label for='projectName'>Project Name</label>
+            <input name='projectname' type='text' class='form-control shadow' id='projectName' />
+          </div>
+          <!-- input project date -->
+          <div class='d-flex w-100 gap-3'>
+            <!-- left -->
+            <div class='form-group d-flex w-100 flex-wrap'>
+              <label class='d-flex w-100' for='startDate'>Start Date</label>
+              <input name='startdate' class='form-control d-flex w-100 shadow' type='date' id='startDate' value='' />
+            </div>
+            <!-- right -->
+            <div class='form-group d-flex w-100 flex-wrap'>
+              <label class='d-flex w-100' for='endDate'>End Date</label>
+              <input name='enddate' class='form-control d-flex w-100 shadow' type='date' id='endDate' value='' />
+            </div>
+          </div>
+
+          <!-- input description -->
+          <div class='form-group d-flex w-100 flex-wrap'>
+            <label class='d-flex w-100' for='descript'>Description</label>
+            <textarea name='description' class='form-control d-flex w-100 shadow' rows='5' id='descript' required></textarea>
+          </div>
+          <!-- checkbox technologies -->
+          <div class='d-flex w-100 flex-wrap'>
+            <label class='d-flex w-100 align-items-center'>Technologies</label>
+            <!-- checkbox left -->
+            <div class='d-flex w-100'>
+              <div class='d-flex w-100 gap-1 flex-wrap'>
+                <div class='form-check d-flex w-100 gap-2'>
+                  <input name='technologies' class='form-check-input' type='checkbox' value='Node JS' id='Node JS' />
+                  <label class='form-check-label' for='Node JS'>Node JS</label>
+                </div>
+                <div class='form-check d-flex w-100 gap-2'>
+                  <input name='technologies' class='form-check-input' type='checkbox' value='React JS' id='React JS' />
+                  <label class='form-check-label' for='React JS'>React JS</label>
+                </div>
+              </div>
+              <!-- checkbox right -->
+              <div class='d-flex w-100 gap-1 flex-wrap'>
+                <div class='form-check d-flex w-100 gap-2'>
+                  <input name='technologies' class='form-check-input' type='checkbox' value='Next JS' id='Next JS' />
+                  <label class='form-check-label' for='Next JS'>Next JS</label>
+                </div>
+                <div class='form-check d-flex w-100 gap-2'>
+                  <input name='technologies' class='form-check-input' type='checkbox' value='Typescript' id='Typescript' />
+                  <label class='form-check-label' for='Typescript'>Typescript</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- upload file image -->
+          <div class='d-flex w-100'>
+            <input name='image' class='form-control shadow' type='file' id='choose' />
+            <label class='form-label' for='choose'></label>
+          </div>
+          <!-- button submit -->
+          <div class='d-flex w-100 justify-content-end'>
+            <button type='submit' class='btn btn-dark'>submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End -->
+
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p' crossorigin='anonymous'></script>
+  </body>
+</html>
